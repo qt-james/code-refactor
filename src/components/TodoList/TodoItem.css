@@ -1,0 +1,12 @@
+.todo-item {
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.todo-item:hover {
+  background-color: #f8f9fa;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
