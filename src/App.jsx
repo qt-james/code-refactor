@@ -21,7 +21,7 @@ function App() {
 
       <div className="d-flex justify-content-between mb-3">
         <h2 className="display-6" style={{ fontSize: "1.5rem" }}>
-          {isRefactored ? "Refactored" : "Unrefactored"}
+          {isRefactored ? "Refactored" : "NewRefactored"}
         </h2>
         <Button color="primary" onClick={handleToggle}>
           Toggle

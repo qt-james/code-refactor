@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 
-export const useTodo = () => {
+export const TodoContext = createContext();
+
+export const TodoProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState("");
   const [editingIndex, setEditingIndex] = useState(null);
@@ -10,7 +12,6 @@ export const useTodo = () => {
     if (newItem.trim()) {
       setItems([...items, newItem]);
       setNewItem("");
-      console.log(items)
     }
   };
 
@@ -34,24 +35,22 @@ export const useTodo = () => {
     }
   };
 
-  const handleNewItemChange = (value) => {
-    setNewItem(value);
-  };
-
-  const handleEditTextChange = (value) => {
-    setEditText(value);
-  };
-
-  return {
-    items,
-    newItem,
-    editingIndex,
-    editText,
-    handleAddItem,
-    handleDeleteItem,
-    handleStartEdit,
-    handleSaveEdit,
-    handleNewItemChange,
-    handleEditTextChange,
-  };
+  return (
+    <TodoContext.Provider
+      value={{
+        items,
+        newItem,
+        editingIndex,
+        editText,
+        setNewItem,
+        setEditText,
+        handleAddItem,
+        handleDeleteItem,
+        handleStartEdit,
+        handleSaveEdit,
+      }}
+    >
+      {children}
+    </TodoContext.Provider>
+  );
 };
