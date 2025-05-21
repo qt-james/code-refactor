@@ -10,7 +10,6 @@ export const useTodo = () => {
     if (newItem.trim()) {
       setItems([...items, newItem]);
       setNewItem("");
-      console.log(items)
     }
   };
 

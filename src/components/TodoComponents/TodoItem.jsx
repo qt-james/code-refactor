@@ -1,4 +1,3 @@
-import { Button, Input } from "reactstrap";
 import useTodoList from "../../hooks/useTodoList";
 import Todo from "./Todo";
 import EditTodo from "./EditTodo";

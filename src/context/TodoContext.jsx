@@ -54,3 +54,5 @@ export const TodoProvider = ({ children }) => {
     </TodoContext.Provider>
   );
 };
+
+// export const useTodo = () => useContext(TodoContext);
