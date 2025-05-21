@@ -8,7 +8,7 @@ const UTodoForm = ({ newTodo, setNewTodo, onAddTodo }) => {
     };
 
     return (
-        <form className="d-flex mb-3" style={{ gap: "0.5rem" }} onSubmit={handleSubmit}>
+        <form className="d-flex mb-3 mx-3" style={{ gap: "0.5rem" }} onSubmit={handleSubmit}>
             <Input
                 type="text"
                 value={newTodo}
